@@ -1,11 +1,11 @@
 <?php
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+// use PHPMailer\PHPMailer\PHPMailer;
+// use PHPMailer\PHPMailer\Exception;
 
-require './PHPMailer/src/Exception.php';
-require './PHPMailer/src/PHPMailer.php';
-require './PHPMailer/src/SMTP.php';   
+// require './src/Exception.php';
+require './phpmailer/PHPMailerAutoload.php';
+// require './src/SMTP.php';   
 
     if( !empty($_POST["name"]) && !empty($_POST["email"]) && !empty($_POST["message"])){
 
@@ -14,17 +14,17 @@ require './PHPMailer/src/SMTP.php';
         $message = trim($_POST["message"]);
 
         $mail = new PHPMailer();   
-        $mail->IsSMTP();           
+        $mail->isSMTP();         
 
         //Server settings
         $mail->SMTPDebug = 2;                                           // Enable verbose debug output
-        $mail->isSMTP();                                                // Set mailer to use SMTP
-        $mail->Host       = 'smtp.gmail.com';                           // Specify main and backup SMTP servers
         $mail->SMTPAuth   = true;                                       // Enable SMTP authentication
-        $mail->Username   = 'jakembalbedina@gmail.com';                 // SMTP username
-        $mail->Password   = 'Secret123;';                               // SMTP password
+        $mail->Host       = 'smtp.gmail.com';                           // Specify main and backup SMTP servers
         $mail->SMTPSecure = 'tls';                                      // Enable TLS encryption, `ssl` also accepted
         $mail->Port       = 587;                                        // TCP port to connect to
+
+        $mail->Username   = 'jakembalbedina@gmail.com';                 // SMTP username
+        $mail->Password   = 'Secret123;';                               // SMTP password
 
         //Recipients
         $mail->setFrom('jakembalbedina@gmail.com', 'PacificBlueIT');    // FROM:
