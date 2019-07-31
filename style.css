@@ -263,7 +263,7 @@ button:focus {
 	display: inline;
 	float: center;
 	text-align: center;
-	width: 30%;
+	width: 35%;
 	margin: 0 auto;
 	display: block;
 }
@@ -1539,7 +1539,7 @@ button:focus {
 @media (max-width: 767px) {
 
 	.mu-logo img {
-		width: 150px;
+		width: 650px;
 	}
 
 	
