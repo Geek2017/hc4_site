@@ -17,7 +17,7 @@ require './phpmailer/PHPMailerAutoload.php';
         $mail->isSMTP();         
 
         //Server settings
-        $mail->SMTPDebug = 0;                                           // Enable verbose debug output
+        $mail->SMTPDebug = 0;                                           // Disable/Enable verbose debug output
         $mail->SMTPAuth   = true;                                       // Enable SMTP authentication
         $mail->Host       = 'smtp.gmail.com';                           // Specify main and backup SMTP servers
         $mail->SMTPSecure = 'tls';                                      // Enable TLS encryption, `ssl` also accepted
@@ -39,7 +39,7 @@ require './phpmailer/PHPMailerAutoload.php';
         if(!$mail->Send()) {
             echo "Mailer Error: " . $mail->ErrorInfo;
         } else {
-            echo "Message has been sent";
+            echo "Thank You! Your message has been sent.";
         }
     }
 
