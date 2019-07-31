@@ -1383,6 +1383,11 @@ button:focus {
 
 @media (max-width: 1199px) {
 
+	.qr { 
+		/* display: block;  */
+		display: none; 
+	}
+
 	.mu-register-content {
 		padding: 0 150px;
 	}
