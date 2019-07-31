@@ -17,7 +17,7 @@ require './phpmailer/PHPMailerAutoload.php';
         $mail->isSMTP();         
 
         //Server settings
-        $mail->SMTPDebug = 2;                                           // Enable verbose debug output
+        $mail->SMTPDebug = 0;                                           // Enable verbose debug output
         $mail->SMTPAuth   = true;                                       // Enable SMTP authentication
         $mail->Host       = 'smtp.gmail.com';                           // Specify main and backup SMTP servers
         $mail->SMTPSecure = 'tls';                                      // Enable TLS encryption, `ssl` also accepted
