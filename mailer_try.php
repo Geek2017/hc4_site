@@ -23,12 +23,12 @@ require './phpmailer/PHPMailerAutoload.php';
         $mail->SMTPSecure = 'tls';                                      // Enable TLS encryption, `ssl` also accepted
         $mail->Port       = 587;                                        // TCP port to connect to
 
-        $mail->Username   = 'jakembalbedina@gmail.com';                 // SMTP username
-        $mail->Password   = 'Secret123;';                               // SMTP password
+        $mail->Username   = 'info.pacificblueit@gmail.com';             // SMTP username
+        $mail->Password   = 'pbit@117117';                              // SMTP password
 
         //Recipients
-        $mail->setFrom('jakembalbedina@gmail.com', 'PacificBlueIT');    // FROM:
-        $mail->addAddress($email, $name);                               // TO: Add a recipient
+        $mail->setFrom('info.pacificblueit@gmail.com', 'PacificBlueIT');    // FROM:
+        $mail->addAddress($email, $name);                                   // TO: Add a recipient
 
         // Content
         $mail->isHTML(true);                                        // Set email format to HTML
