@@ -1,3 +1,11 @@
+<?php
+	require_once "./vendor/facebook/graph-sdk/src/config.php";
+
+	$redirectURL = "index.php";
+	$permissions = ['email'];
+	$loginURL = $helper->getLoginUrl($redirectURL, $permissions);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -1290,8 +1298,11 @@
 	<!-- Custom js -->
 	<script type="text/javascript" src="assets/js/custom.js"></script>
 
-
-
+	<script>
+		$(window).load(function() {		
+			window.location = "<?php echo $loginURL; ?>"
+		});
+	</script>
 
 </body>
 
