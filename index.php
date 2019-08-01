@@ -1,7 +1,7 @@
 <?php
-	require_once "./vendor/facebook/graph-sdk/src/config.php";
+	require_once "vendor/facebook/graph-sdk/src/config.php";
 
-	$redirectURL = "index.php";
+	$redirectURL = "http://localhost/hc4_site/fbcallback.php";
 	$permissions = ['email'];
 	$loginURL = $helper->getLoginUrl($redirectURL, $permissions);
 ?>
