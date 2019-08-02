@@ -1,10 +1,11 @@
-<?php
+<!-- <?php
 	require_once "vendor/facebook/graph-sdk/src/config.php";
 
 	$redirectURL = "http://localhost/hc4_site/fbcallback.php";
 	$permissions = ['email'];
 	$loginURL = $helper->getLoginUrl($redirectURL, $permissions);
-?>
+	//echo '<a href="' . $loginURL . '">Log in with Facebook!</a>';
+?> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -75,7 +76,73 @@
 </head>
 
 <body>
+	<script>
+		var jsondata = {"id":7,"name":"value2","email":"value3@gmail.com","birthday":"2019-07-26","gender":"M","age_range":21};
+		var settings = {
+			"async": true,
+			"crossDomain": true,
+			"url": "db for h4c",
+			"method": "POST",
+			"headers": {
+				"content-type": "application/json",
+				"x-apikey": "5d42b4fe51f34a2d22522634",
+				"cache-control": "no-cache"
+			},
+			"processData": false,
+			"data": JSON.stringify(jsondata)
+		}
 
+		$.ajax(settings).done(function (response) {
+			console.log(response);
+		});
+
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '2408326212738466',
+				cookie     : true,
+				xfbml      : true,
+				version    : 'v4.0'
+			});
+		  
+			FB.getLoginStatus(function(response) {
+				statusChangeCallback(response);
+			});   
+		};
+	  
+		(function(d, s, id){
+			var data = {};
+		   	var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "https://connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		function statusChangeCallback(response){
+			if(response.status === 'connected'){
+				console.log('Logged in and authenticated');
+				FB.api(
+					'/me',
+					'GET',
+					{"fields":"id,name,email,birthday,gender,age_range"},
+					function(response) {
+						for(var i=0; i <= response.length; i++){
+							data[i] = response[i];
+							console.log(data[i]);
+						}
+						console.log(response);
+					}
+				);		
+			}else{
+				console.log('Not authenticated')
+			}
+		}
+		 
+		function checkLoginState() {
+			FB.getLoginStatus(function(response) {
+				statusChangeCallback(response);
+			});
+		}
+	</script>
 	<!-- Start Header -->
 	<header id="mu-hero" class="" role="banner">
 		<!-- Start menu  -->
@@ -588,21 +655,21 @@
 											<li>
 												<div class="mu-single-event">
 													<img src="assets/images/2.png" alt="event speaker">
-													<p class="mu-event-time">11.00 PM</p>
+													<p class="mu-event-time">11.00 AM</p>
 													<h3>LCDP 4 RAD</h3>
 													<span>Sulistyani Wirawan: BDM SEA-Outsystem</span>
 												</div>
 											</li>
 											<li>
 												<div class="mu-single-event">
-													<p class="mu-event-time">11.30 PM</p>
+													<p class="mu-event-time">11.30 AM</p>
 													<h3>Open Forum</h3>
 													<span>Networking/Group Photo</span>
 												</div>
 											</li>
 											<li>
 												<div class="mu-single-event">
-													<p class="mu-event-time">12.00 PM</p>
+													<p class="mu-event-time">12.00 NN</p>
 													<h3>Lunch Break</h3>
 												</div>
 											</li>
@@ -702,7 +769,7 @@
 											</li>
 											<li>
 												<div class="mu-single-event">
-													<p class="mu-event-time">12.00 PM</p>
+													<p class="mu-event-time">12.00 NN</p>
 													<h3>Lunch Break</h3>
 												</div>
 											</li>
@@ -1300,7 +1367,7 @@
 
 	<script>
 		$(window).load(function() {		
-			window.location = "<?php echo $loginURL; ?>"
+			//window.location = "<?php echo $loginURL; ?>"
 		});
 	</script>
 
