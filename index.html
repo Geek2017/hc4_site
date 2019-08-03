@@ -201,7 +201,7 @@
 							<!-- text based logo -->
 							<!-- <a class="mu-logo" href="#">Hack4Change</a> -->
 							<!-- image based logo -->
-							<a class="mu-logo pull-center" href="#"><img src="assets/images/h4c.PNG" alt="logo img"></a>
+							<a class="mu-logo pull-center" href="#"><img width="1000" height="180" src="assets/images/h4c_logo.jpg" alt="logo img"></a>
 						</div>
 
 						<!-- End center Logo -->
@@ -211,9 +211,9 @@
 							<h2>-Divising Digital Solution To the Top Problem of our Region-</h2>
 							<p class="mu-event-date-line">November 23-24, 2019 Legazpi City Convention Center, Albay</p><br>
 
-							<button class="btn btn-primary btn-modal " data-toggle="modal" data-target="#fsModal">
-								Register
-							</button>
+							<!-- <button class="btn btn-primary btn-modal " data-toggle="modal" data-target="#fsModal"> -->
+									<img src="./assets/images/register.gif" data-toggle="modal" data-target="#fsModal" height="60">
+							<!-- </button> -->
 
 							<span class="qr">
 								<font color="white">OR</font>
@@ -226,7 +226,7 @@
 
 							</div>
 
-							<button onclick="scrollWin()" style="background-color: Transparent;cursor:pointer;z-index:999;position:fixed; text-align:right;bottom:0;right:0;"><img style="height: 80%; width: 80%;" src="https://static.thenounproject.com/png/486805-200.png"></button>
+							<button id="hidden" onclick="scrollWin()" style="background-color: Transparent;cursor:pointer;z-index:999;position:fixed; text-align:right;bottom:0;right:0;"><img id="hidden" style="height: 80%; width: 80%;" src="https://static.thenounproject.com/png/486805-200.png"></button>
 	
 						</div>
 					</div>
@@ -1446,7 +1446,6 @@
 			// 	return false;
 			// });
 		});
-
 	
 		function scrollWin() {
 			window.scrollBy(0, 500);

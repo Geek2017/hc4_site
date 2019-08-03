@@ -1421,7 +1421,9 @@ button:focus {
 }
 
 @media (max-width: 991px) {	
-
+	img#hidden {
+		display: none;
+	}
 	.mu-primary-btn {
 		font-size: 14px;
 		padding: 12px 22px;
@@ -1547,7 +1549,9 @@ button:focus {
 }
 
 @media (max-width: 767px) {
-
+	img#hidden {
+		display: none;
+	}
 	.mu-logo img {
 		width: 650px;
 	}
@@ -1574,7 +1578,9 @@ button:focus {
 
 
 @media (max-width: 640px){
-	
+	img#hidden {
+		display: none;
+	}
 	.mu-event-counter-block {
 		height: 100px;
 		width: 100px;
@@ -1613,7 +1619,9 @@ button:focus {
 
 
 @media (max-width: 480px) {
-
+	img#hidden {
+		display: none;
+	}
 	body {
 		font-size: 14px;
 	}
@@ -1742,11 +1750,11 @@ button:focus {
 
 
 @media (max-width: 360px) {
+	img#hidden {
+		display: none;
+	}
 	.box-part{
 		display: inline-block;
-	}
-	.text-center{
-
 	}
 	.mu-schedule-area{
 		display: inline-block;
@@ -1808,7 +1816,9 @@ button:focus {
 
 
 @media (max-width: 320px) {
-
+	img#hidden {
+		display: none;
+	}
 	.mu-video-iframe-area {
 		padding: 30% 5%;
 	}
