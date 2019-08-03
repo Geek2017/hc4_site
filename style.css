@@ -1129,7 +1129,6 @@ button:focus {
 	float: left;
 	position: relative;
 	width: 100%;
-	z-index: -1;
 }
 
 .mu-faq-area {
