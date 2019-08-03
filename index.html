@@ -76,6 +76,7 @@
 </head>
 
 <body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script>
 		var jsondata = {"id":7,"name":"value2","email":"value3@gmail.com","birthday":"2019-07-26","gender":"M","age_range":21};
 		var settings = {
@@ -143,6 +144,15 @@
 			});
 		}
 	</script>
+
+	<!-- Mdal when page loaded -->
+	<div id="myModal" class="modal fade">
+		<div class="modal-body">	
+			<div id="fb-root"></div>				
+			<div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>				
+		</div>
+	</div>
+		
 	<!-- Start Header -->
 	<header id="mu-hero" class="" role="banner">
 		<!-- Start menu  -->
@@ -619,10 +629,10 @@
 											</li>
 											<li>
 												<div class="mu-single-event">
-													<img src="assets/images/8.png" alt="event speaker">
+													<img src="assets/images/speaker-1.jpg" alt="event speaker">
 													<p class="mu-event-time">9.30 - 10.00 AM</p>
 													<h3>Welcome Remarks</h3>
-													<span>George Nakano: President/CEO-Pacific Blue</span>
+													<span>TBA</span>
 													<br>
 													<br>
 													<img src="assets/images/speaker-1.jpg" alt="event speaker">
@@ -638,26 +648,26 @@
 											</li>
 											<li>
 												<div class="mu-single-event">
-													<img src="assets/images/7.jpg" alt="event speaker">
+													<img src="assets/images/speaker-1.jpg" alt="event speaker">
 													<p class="mu-event-time">10.00 AM</p>
 													<h3><i>Why do we Hack?</i></h3>
-													<span>JM Grefaldo: Director/CIO - Pacific Blue IT</span>
+													<span>TBA</span>
 												</div>
 											</li>
 											<li>
 												<div class="mu-single-event">
-													<img src="assets/images/1.png" alt="event speaker">
+													<img src="assets/images/speaker-1.jpg" alt="event speaker">
 													<p class="mu-event-time">10.30 AM</p>
 													<h3>Amplifying Human Ingenuity Thru A.I</h3>
-													<span>Bon Moya: NTO-Microsoft</span>
+													<span>TBA</span>
 												</div>
 											</li>
 											<li>
 												<div class="mu-single-event">
-													<img src="assets/images/2.png" alt="event speaker">
+													<img src="assets/images/speaker-1.jpg" alt="event speaker">
 													<p class="mu-event-time">11.00 AM</p>
 													<h3>LCDP 4 RAD</h3>
-													<span>Sulistyani Wirawan: BDM SEA-Outsystem</span>
+													<span>TBA</span>
 												</div>
 											</li>
 											<li>
@@ -675,49 +685,49 @@
 											</li>
 											<li>
 												<div class="mu-single-event">
-													<img src="assets/images/3.png" alt="event speaker">
+													<img src="assets/images/speaker-1.jpg" alt="event speaker">
 													<p class="mu-event-time">1.00 PM</p>
 													<h3>Cloud Technology</h3>
-													<span>Arvin De-Torre: AWS</span>
+													<span>TBA</span>
 												</div>
 											</li>
 											<li>
 												<div class="mu-single-event">
-													<img src="assets/images/4.png" alt="event speaker">
+													<img src="assets/images/speaker-1.jpg" alt="event speaker">
 													<p class="mu-event-time">1.30 PM</p>
 													<h3>Cloud Academe Software</h3>
-													<span>Carlos Dela Santos - Princetech</span>
+													<span>TBA</span>
 												</div>
 											</li>
 											<li>
 												<div class="mu-single-event">
-													<img src="assets/images/5.png" alt="event speaker">
+													<img src="assets/images/speaker-1.jpg" alt="event speaker">
 													<p class="mu-event-time">2.00 PM</p>
 													<h3>Software for Academe</h3>
-													<span>Gabriel Eric Villanueva - Crayon</span>
+													<span>TBA</span>
 												</div>
 											</li>
 											<li>
 												<div class="mu-single-event">
-													<img src="assets/images/6.png" alt="event speaker">
+													<img src="assets/images/speaker-1.jpg" alt="event speaker">
 													<p class="mu-event-time">2.30 PM</p>
 													<h3>Latest Trend</h3>
-													<span>Joey Gurango-Servio</span>
+													<span>TBA</span>
 												</div>
 											</li>
 											<li>
 												<div class="mu-single-event">
-													<img src="assets/images/10.png" alt="event speaker">
+													<img src="assets/images/speaker-1.jpg" alt="event speaker">
 													<p class="mu-event-time">3.00 PM</p>
 													<h3>Version Control Part 1</h3>
-													<h3> Jake Balbedina</h3>
+													<h3> TBA</h3>
 													<span>Software Engineer: Pacific Blue IT</span>
 													<br>
 													<br>
-													<img src="assets/images/9.png" alt="event speaker">
+													<img src="assets/images/speaker-1.jpg" alt="event speaker">
 													<p class="mu-event-time">&nbsp;</p>
 													<h3>Version Control Part 2</h3>
-													<h3>Prince Mauro Ang</h3>
+													<h3>TBA</h3>
 													<span>Software Engineer: Pacific Blue IT</span>
 												</div>
 											</li>
@@ -1063,7 +1073,7 @@
 										</div>
 										<div id="collapse3" class="panel-collapse collapse">
 											<div class="panel-body">
-												Call time is 9.00 AM of Oct. 5 2019
+												Call time is 9.00 AM of November 23, 2019
 											</div>
 										</div>
 									</div>
@@ -1359,15 +1369,22 @@
 	<script type="text/javascript" src="assets/js/jquery.countdown.min.js"></script>
 	<!-- Ajax contact form  -->
 	<script type="text/javascript" src="assets/js/app.js"></script>
-
+	<!-- FB button -->
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0&appId=2408326212738466&autoLogAppEvents=1"></script>
 
 
 	<!-- Custom js -->
 	<script type="text/javascript" src="assets/js/custom.js"></script>
 
-	<script>
-		$(window).load(function() {		
-			//window.location = "<?php echo $loginURL; ?>"
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#myModal").modal('show');
+
+			$('#myModal').on('hide.bs.modal', function (e) {
+				e.preventDefault();
+				e.stopPropagation();
+				return false;
+			});
 		});
 	</script>
 
